@@ -65,6 +65,7 @@
 		</property>
 		<property name="loginUrl" value="/login" />
 		<property name="unauthorizedUrl" value="/unauthorized" />
+
 		<property name="filterChainDefinitions">
 			<value>
 				/=anon

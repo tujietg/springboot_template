@@ -6,12 +6,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
-import org.apache.shiro.web.util.WebUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 public class MyFilter extends BasicHttpAuthenticationFilter {
-
 	/**
 	 * 对跨域的支持
 	 */
@@ -32,8 +30,9 @@ public class MyFilter extends BasicHttpAuthenticationFilter {
 	}
 
 	/**
-	 * 判断用户是否是登陆操作
+	 * 验证token
 	 */
+	@Override
 	protected boolean isLoginAttempt(ServletRequest request, ServletResponse response) {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		String authorization = httpRequest.getHeader("Authorization");
@@ -50,17 +49,27 @@ public class MyFilter extends BasicHttpAuthenticationFilter {
 	 */
 	@Override
 	protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
+		// 判断是否包含token
 		if (isLoginAttempt(request, response)) {
-			System.out.println("用户已经登陆");
+			// 验证token
+			try {
+				executeLogin(request, response);
+			} catch (Exception e) {
+				String msg = e.getMessage();
+			}
 		}
-		System.out.println("用户进行登陆操作");
 		return true;
 	}
 
+	/**
+	 * 验证token的正确性
+	 */
 	protected boolean executeLogin(ServletRequest request, ServletResponse response) {
-
-	
-		return false;
+		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+		JWTToken token = new JWTToken(httpServletRequest.getHeader("Authorization"));
+		// 交给MyRealm验证
+		getSubject(request, response).login(token);
+		// 如果没有异常，返回true。
+		return true;
 	}
-
 }
