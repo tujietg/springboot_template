@@ -31,22 +31,24 @@
 
         <!-- targetProject:生成PO类的位置 -->
         <javaModelGenerator
-                targetPackage="com.macro.mall.malltiny01.mbg.model"
-                targetProject="/Users/tujietg/IdeaProjects/mall-tiny-01/src/main/java/com/macro/mall/malltiny01/mbg/model"/>
+                targetPackage="com.tujietg.template.dao"
+                targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java/com/tujietg/template/dao"/>
 
-        <!-- targetProject:mapper映射文件生成的位置 -->
-        <sqlMapGenerator
-                targetPackage="com.macro.mall.malltiny01.mbg.mapper"
-                targetProject="/Users/tujietg/IdeaProjects/mall-tiny-01/src/main/resources"/>
 
         <!-- targetPackage：mapper接口生成的位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.macro.mall.malltiny01.mbg.mapper"
-                             targetProject="/Users/tujietg/IdeaProjects/mall-tiny-01/src/main/java/com/macro/mall/malltiny01/mbg/mapper"/>
+                             targetPackage="com.tujietg.template.mbg.mapper"
+                             targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java/com/tujietg/template/mbg/mapper"/>
 
+        <!-- targetProject:mapper映射文件生成的位置  mapper.xml-->
+        <sqlMapGenerator
+                targetPackage="com.tujietg.template.mbg.mapper"
+                targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/resources"/>
         <!--生成表格 -->
-        <table schema="" tableName="ums_member"/>
 
+
+        <table schema="" tableName="ums_member"/>
+        
         <!-- <table schema="" tableName="ums_member_pid_using_history" /> -->
         <!-- 指定数据库表 -->
         <!-- <table schema="" tableName="ums_member_problem_feedback" /> -->
