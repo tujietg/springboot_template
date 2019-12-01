@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/11/29 3:03 PM
  */
 @SpringBootApplication
-public class MallTiny01Application {
+public class SpringBootTemplateApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MallTiny01Application.class, args);
+        SpringApplication.run(SpringBootTemplateApplication.class, args);
     }
 
 }

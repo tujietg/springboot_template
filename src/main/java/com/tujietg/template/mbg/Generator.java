@@ -10,7 +10,7 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 /**
- * mybatis 逆向工程生成pojo和mapper
+ * mybatis 逆向工程生成pojo和mapper 主要用于生产mbg中的数据
  *
  * @author tujietg
  * @date 2019/11/29 3:03 PM
@@ -18,9 +18,8 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 public class Generator {
 
     public void generator() throws Exception {
-
         List<String> warnings = new ArrayList<>();
-        File configFile = new File("generatorConfig.xml");
+        File configFile = new File("/Users/tujietg/IdeaProjects/springboot-template/src/main/resources/generatorConfig.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(true);

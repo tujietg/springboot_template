@@ -4,41 +4,43 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
+    <properties resource="generator.properties"/>
     <context id="testTables" targetRuntime="MyBatis3">
-        <commentGenerator>
-            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="false"/>
-        </commentGenerator>
-
 
         <!-- 为模型生成序列化方法-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
 
-        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL
-            和 NUMERIC 类型解析为java.math.BigDecimal -->
-        <javaTypeResolver>
-            <property name="forceBigDecimals" value="false"/>
-        </javaTypeResolver>
+        <!-- 为生成的Java模型创建一个toString方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+        <commentGenerator type="com.tujietg.template.mbg.CommentGenerator">
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
 
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="${jdbc.driverClass}"
                         connectionURL="${jdbc.connectionURL}"
                         userId="${jdbc.userId}"
                         password="${jdbc.password}">
-            <property name="useInformationSchema" value="true"/>
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
+
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL
+       和 NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
 
 
         <!-- targetProject:生成PO类的位置 -->
         <javaModelGenerator
-                targetPackage="com.tujietg.template.dao"
-                targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java/com/tujietg/template/dao"/>
+                targetPackage="com.tujietg.template.mbg.model"
+                targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java"/>
 
-
-        <!-- targetPackage：mapper接口生成的位置 -->
-        <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.tujietg.template.mbg.mapper"
-                             targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java/com/tujietg/template/mbg/mapper"/>
 
         <!-- targetProject:mapper映射文件生成的位置  mapper.xml-->
         <sqlMapGenerator
@@ -46,31 +48,13 @@
                 targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/resources"/>
         <!--生成表格 -->
 
+        <!-- targetPackage：mapper接口生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.tujietg.template.mbg.mapper"
+                             targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java"/>
 
-        <table schema="" tableName="ums_member"/>
-        
-        <!-- <table schema="" tableName="ums_member_pid_using_history" /> -->
-        <!-- 指定数据库表 -->
-        <!-- <table schema="" tableName="ums_member_problem_feedback" /> -->
-        <!-- <table schema="" tableName="pms_product_list" /> <table schema=""
-            tableName="pms_product_search" /> <table schema="" tableName="pms_product_super_save"
-            /> <table schema="" tableName="pms_module" /> <table schema="" tableName="pms_product_module"
-            /> <table schema="" tableName="pms_banner" /> -->
-        <!-- <table schema="" tableName="ums_member_rebate" /> <table schema=""
-            tableName="ums_member_rebate_rule" /> <table schema="" tableName="ums_member_rebate_info"
-            /> <table schema="" tableName="ums_member_rebate_pop" /> <table schema=""
-            tableName="ums_member_statistics_info" /> <table schema="" tableName="ums_receive_coupon_history"
-            /> <table schema="" tableName="ums_receive_coupon_totle" /> <table schema=""
-            tableName="ums_member_favorites" /> <table schema="" tableName="ums_member_browse_history"
-            /> <table schema="" tableName="ums_member_level" /> <table schema="" tableName="ums_member_level_history"
-            /> <table schema="" tableName="ums_member_rule_setting" /> <table schema=""
-            tableName="ums_growth_up_history" /> <table schema="" tableName="ums_growth_down_history"
-            /> <table schema="" tableName="ums_member_problem_feedback" /> <table schema=""
-            tableName="ums_member_instructions" /> <table schema="" tableName="ums_member_login_log"
-            /> <table schema="" tableName="ums_admin" /> <table schema="" tableName="ums_admin_login_log"
-            /> <table schema="" tableName="pms_product_category" /> <table schema=""
-            tableName="pms_module" /> <table schema="" tableName="pms_product_list" />
-            <table schema="" tableName="pms_activity_extend" /> <table schema="" tableName="oms_order"
-            /> -->
+
+        <table schema="" tableName="pms_brand"></table>
+
     </context>
 </generatorConfiguration>
