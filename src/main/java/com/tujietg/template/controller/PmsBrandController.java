@@ -3,6 +3,8 @@ package com.tujietg.template.controller;
 import com.tujietg.template.common.api.CommonResult;
 import com.tujietg.template.mbg.model.PmsBrand;
 import com.tujietg.template.service.PmsBrandService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/brand")
+@Api(tags = "PmsBrandController", description = "品牌分类模块")
 public class PmsBrandController {
 
     @Autowired
@@ -22,6 +25,7 @@ public class PmsBrandController {
 
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)
     @ResponseBody
+    @ApiOperation("获取所有的品牌")
     public CommonResult<List<PmsBrand>> listAllBrand() {
         return CommonResult.success(pmsBrandService.listAllBrand());
     }
@@ -29,6 +33,7 @@ public class PmsBrandController {
 
     @RequestMapping(value = "/createBrand", method = RequestMethod.POST)
     @ResponseBody
+    @ApiOperation("创建品牌")
     public CommonResult createBrand(@RequestBody PmsBrand pmsBrand) {
         CommonResult commonResult;
         int count = pmsBrandService.createBrand(pmsBrand);
@@ -41,8 +46,9 @@ public class PmsBrandController {
     }
 
 
-    @RequestMapping(value = "/update/{id}")
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
+    @ApiOperation("更新品牌")
     public CommonResult updateBrand(@PathVariable("id") Long id, @RequestBody PmsBrand pmsBrand) {
         CommonResult commonResult;
         int count = pmsBrandService.updateBrand(id, pmsBrand);
@@ -54,8 +60,9 @@ public class PmsBrandController {
         return commonResult;
     }
 
-    @RequestMapping(value = "/delete/{id}")
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     @ResponseBody
+    @ApiOperation("根据id删除品牌")
     public CommonResult deleteBrand(@PathVariable("id") Long id) {
         int count = pmsBrandService.deleteBrand(id);
         if (count == 1) {
@@ -66,7 +73,9 @@ public class PmsBrandController {
     }
 
 
-    @RequestMapping(value = "/{id}")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ApiOperation("根据id获取品牌信息")
+    @ResponseBody
     public CommonResult<PmsBrand> getBrand(@PathVariable("id") long id) {
         return CommonResult.success(pmsBrandService.getBrand(id));
     }

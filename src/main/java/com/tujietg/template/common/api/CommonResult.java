@@ -45,7 +45,7 @@ public class CommonResult<T> {
      * @param data
      * @return
      */
-    public static <T> CommonResult<T> success(String message, T data) {
+    public static <T> CommonResult<T> success(T data, String message) {
         return new CommonResult<>(ResultCode.SUCCESS.getCode(), message, data);
     }
 

@@ -2,9 +2,7 @@ package com.tujietg.template.mbg.mapper;
 
 import com.tujietg.template.mbg.model.PmsBrand;
 import com.tujietg.template.mbg.model.PmsBrandExample;
-
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
 
 public interface PmsBrandMapper {
