@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29728c19-d0c6-4638-b0f4-985e2944819e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/UmsMemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/RedisService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/UmsMemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/RedisServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/UmsMemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tujietg/template/common/api/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/common/api/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/PmsBrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/PmsBrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/CommentGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/CommentGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/mapper/PmsBrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/mapper/PmsBrandMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/model/PmsBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/model/PmsBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tujietg/template/mbg/mapper/PmsBrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tujietg/template/mbg/mapper/PmsBrandMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tujietg/template/controller/PmsBrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tujietg/template/controller/PmsBrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tujietg/template/mbg/CommentGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tujietg/template/mbg/CommentGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tujietg/template/mbg/mapper/PmsBrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tujietg/template/mbg/mapper/PmsBrandMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tujietg/template/mbg/model/PmsBrand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tujietg/template/mbg/model/PmsBrand.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,97 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/UmsMemberServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/UmsMemberController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.1.RELEASE/spring-beans-5.2.1.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/common/api/CommonResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/service/UmsMemberService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="67" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2162">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/model/PmsBrandExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/CommentGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -169,14 +65,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/mbg/model/PmsBrand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/tujietg/template/mbg/mapper/PmsBrandMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/PmsBrandController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/RedisService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/RedisServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/UmsMemberService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/common/api/CommonResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/UmsMemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/UmsMemberController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -459,7 +355,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575292928092" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575342881081" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -537,18 +433,18 @@
       <updated>1575095731125</updated>
       <workItem from="1575095734775" duration="20000" />
       <workItem from="1575095792827" duration="274000" />
-      <workItem from="1575096149990" duration="31968000" />
+      <workItem from="1575096149990" duration="37291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32262000" />
+    <option name="totallyTimeSpent" value="37585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2238" y="0" width="1762" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16842106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16842106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -559,7 +455,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32952183" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32952183" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32952183" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -800,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2162">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/TimeUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-805">
@@ -840,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/common/api/CommonResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -864,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/UmsMemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/service/UmsMemberService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -888,15 +760,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/UmsMemberController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state relative-caret-position="207">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#874#875#0" expanded="true" />
             <element signature="e#899#900#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2576">
+          <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tujietg/template/service/impl/UmsMemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
