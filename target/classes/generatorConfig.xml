@@ -7,6 +7,9 @@
     <properties resource="generator.properties"/>
     <context id="testTables" targetRuntime="MyBatis3">
 
+        <!--生成mapper.xml时覆盖原文件 避免xml的叠加-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+
         <!-- 为模型生成序列化方法-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
 
@@ -52,9 +55,7 @@
         <javaClientGenerator type="XMLMAPPER"
                              targetPackage="com.tujietg.template.mbg.mapper"
                              targetProject="/Users/tujietg/IdeaProjects/springboot-template/src/main/java"/>
-
-
-        <table schema="" tableName="pms_brand"></table>
+        <table schema="" tableName="%"></table>
 
     </context>
 </generatorConfiguration>
