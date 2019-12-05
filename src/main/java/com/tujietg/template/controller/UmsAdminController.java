@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +28,7 @@ public class UmsAdminController {
 
     @Autowired
     UmsAdminService adminService;
-    
+
     @Value("${jwt.tokenHeader}")
     private String tokenHeader;
     @Value("${jwt.tokenHead}")
@@ -67,8 +64,12 @@ public class UmsAdminController {
     /**
      * 获取用户所有权限（包括角色权限和+-权限）
      */
-    public List<UmsPermission> getPermissionList(Long adminId) {
-
+    @RequestMapping(value = "/permission/{adminId}", method = RequestMethod.GET)
+    @ResponseBody
+    @ApiOperation("获取用户所有的权限")
+    public CommonResult<List<UmsPermission>> getPermissionList(@PathVariable Long adminId) {
+        List<UmsPermission> permissionList = adminService.getPermissionList(adminId);
+        return CommonResult.success(permissionList);
     }
 
 }
