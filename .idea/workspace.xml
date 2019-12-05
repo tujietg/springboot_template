@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29728c19-d0c6-4638-b0f4-985e2944819e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/UmsAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tujietg/template/controller/UmsAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UmsAdminRoleRelationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UmsAdminRoleRelationDao.xml" afterDir="false" />
-    </list>
+    <list default="true" id="29728c19-d0c6-4638-b0f4-985e2944819e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -391,7 +388,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575511460393" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575531922901" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -472,25 +469,25 @@
       <updated>1575095731125</updated>
       <workItem from="1575095734775" duration="20000" />
       <workItem from="1575095792827" duration="274000" />
-      <workItem from="1575096149990" duration="60952000" />
+      <workItem from="1575096149990" duration="61470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61246000" />
+    <option name="totallyTimeSpent" value="61764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2248" y="0" width="1752" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.830721" visible="true" weight="0.20235294" />
-      <window_info id="Structure" order="1" sideWeight="0.169279" side_tool="true" visible="true" weight="0.20235294" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8302181" visible="true" weight="0.20235294" />
+      <window_info id="Structure" order="1" sideWeight="0.16978194" side_tool="true" visible="true" weight="0.20235294" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.33193716" />
+      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.33055267" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32952183" />
