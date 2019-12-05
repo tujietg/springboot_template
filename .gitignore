@@ -1,6 +1,10 @@
 .idea
-.mvn.*
-target
+.mvn
 .DS_Store
+
 HELP.md
-mvnw.*
+target
+mvnw
+mvnw.cmd
+
+
