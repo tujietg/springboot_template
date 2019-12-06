@@ -1,6 +1,7 @@
 package com.tujietg.template.service.impl;
 
 import com.tujietg.template.common.utils.JwtTokenUtil;
+import com.tujietg.template.dao.UmsAdminRoleRelationDao;
 import com.tujietg.template.mbg.mapper.UmsAdminMapper;
 import com.tujietg.template.mbg.model.UmsAdmin;
 import com.tujietg.template.mbg.model.UmsAdminExample;
@@ -31,27 +32,24 @@ import java.util.List;
 public class UmsAdminServiceImpl implements UmsAdminService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UmsAdminServiceImpl.class);
-
     @Autowired
-    UserDetailsService userDetailsService;
-
+    private UserDetailsService userDetailsService;
     @Autowired
-    private UmsAdminMapper adminMapper;
-
+    private JwtTokenUtil jwtTokenUtil;
     @Autowired
     private PasswordEncoder passwordEncoder;
-
     @Value("${jwt.tokenHead}")
     private String tokenHead;
-
     @Autowired
-    JwtTokenUtil jwtTokenUtil;
-
+    private UmsAdminMapper adminMapper;
+    @Autowired
+    private UmsAdminRoleRelationDao adminRoleRelationDao;
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {
-        List<UmsAdmin> adminList = getAdminListByUsername(username);
-
+        UmsAdminExample example = new UmsAdminExample();
+        example.createCriteria().andUsernameEqualTo(username);
+        List<UmsAdmin> adminList = adminMapper.selectByExample(example);
         if (adminList != null && adminList.size() > 0) {
             return adminList.get(0);
         }
@@ -64,10 +62,14 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         BeanUtils.copyProperties(umsAdminParam, umsAdmin);
         umsAdmin.setCreateTime(new Date());
         umsAdmin.setStatus(1);
-        List<UmsAdmin> adminList = getAdminListByUsername(umsAdmin.getUsername());
-        if (adminList.size() > 0) {
+        //查询是否有相同用户名的用户
+        UmsAdminExample example = new UmsAdminExample();
+        example.createCriteria().andUsernameEqualTo(umsAdmin.getUsername());
+        List<UmsAdmin> umsAdminList = adminMapper.selectByExample(example);
+        if (umsAdminList.size() > 0) {
             return null;
         }
+        //将密码进行加密操作
         String encodePassword = passwordEncoder.encode(umsAdmin.getPassword());
         umsAdmin.setPassword(encodePassword);
         adminMapper.insert(umsAdmin);
@@ -91,22 +93,9 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         return token;
     }
 
+
     @Override
     public List<UmsPermission> getPermissionList(Long adminId) {
-        return null;
-    }
-
-
-    /**
-     * 根据username获取管理员列表
-     *
-     * @param username
-     * @return
-     */
-    private List<UmsAdmin> getAdminListByUsername(String username) {
-        UmsAdminExample example = new UmsAdminExample();
-        example.createCriteria().andUsernameEqualTo(username);
-        List<UmsAdmin> adminList = adminMapper.selectByExample(example);
-        return adminList;
+        return adminRoleRelationDao.getPermissionList(adminId);
     }
 }

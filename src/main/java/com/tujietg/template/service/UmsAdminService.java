@@ -14,31 +14,23 @@ import java.util.List;
 public interface UmsAdminService {
 
     /**
-     * 获取管理员信息通过username
-     *
-     * @param username
-     * @return
+     * 根据用户名获取后台管理员
      */
     UmsAdmin getAdminByUsername(String username);
 
     /**
-     * 管理员注册模块
-     *
-     * @param umsAdminParam
-     * @return
+     * 注册功能
      */
     UmsAdmin register(UmsAdmin umsAdminParam);
 
-
     /**
-     * 管理员登录模块
+     * 登录功能
      *
-     * @param username
-     * @param password
-     * @return
+     * @param username 用户名
+     * @param password 密码
+     * @return 生成的JWT的token
      */
     String login(String username, String password);
-
 
     /**
      * 获取用户所有权限（包括角色权限和+-权限）

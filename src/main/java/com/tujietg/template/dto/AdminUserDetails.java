@@ -26,7 +26,6 @@ public class AdminUserDetails implements UserDetails {
         this.permissionList = permissionList;
     }
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         //返回当前用户的权限
@@ -35,7 +34,6 @@ public class AdminUserDetails implements UserDetails {
                 .map(permission -> new SimpleGrantedAuthority(permission.getValue()))
                 .collect(Collectors.toList());
     }
-
 
     @Override
     public String getPassword() {
@@ -66,7 +64,6 @@ public class AdminUserDetails implements UserDetails {
     public boolean isEnabled() {
         return umsAdmin.getStatus().equals(1);
     }
-
 
 }
 

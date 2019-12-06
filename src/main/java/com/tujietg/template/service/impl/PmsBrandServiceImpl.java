@@ -51,4 +51,6 @@ public class PmsBrandServiceImpl implements PmsBrandService {
     public PmsBrand getBrand(Long id) {
         return brandMapper.selectByPrimaryKey(id);
     }
+
+
 }
