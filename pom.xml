@@ -73,13 +73,6 @@
             <version>8.0.11</version>
         </dependency>
 
-        <!-- 代码简化工具 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-            <scope>provided</scope>
-        </dependency>
 
         <!--文档生成工具，swagger-ui 依赖的引入 -->
         <dependency>
@@ -110,6 +103,21 @@
             <artifactId>hutool-all</artifactId>
             <version>4.5.7</version>
         </dependency>
+
+
+        <!--消息队列相关依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <!--lombok依赖-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
 
         <!--JWT(Json Web Token)登录支持-->
         <dependency>
