@@ -20,7 +20,6 @@ import java.io.IOException;
 @Component
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
 
-    
     @Override
     public void handle(HttpServletRequest httpServletRequest,
                        HttpServletResponse httpServletResponse,
